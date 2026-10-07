@@ -13,7 +13,7 @@ const grid=document.getElementById('project-grid');
 const overviews=document.getElementById('project-overviews');
 projects.forEach((project,index)=>{
   const card=document.createElement('a'); card.className='project-card'; card.href='#project-'+project.id;
-  const art=document.createElement('div'); art.className='tile '+project.color;
+  const art=document.createElement('div'); art.className='tile '+project.color; art.dataset.projectTitle=project.name;
   const meta=document.createElement('span'); meta.className='small-label'; meta.textContent=String(index+2).padStart(2,'0')+' / '+project.category;
   const name=document.createElement('span'); name.className='tile-name'; name.textContent=project.name;
   const bottom=document.createElement('span'); bottom.className='tile-bottom'; bottom.textContent=project.subtitle;
