@@ -1,0 +1,6 @@
+.hero-type-line{position:relative;display:inline-block;vertical-align:top}
+.hero-type-text{display:inline-block}
+.hero-pixels{position:absolute;left:-36px;top:-36px;pointer-events:none;opacity:0}
+.hero-type-line.is-pixel-active>.hero-type-text{opacity:0}
+.hero-type-line.is-pixel-active>.hero-pixels{opacity:1}
+@media(prefers-reduced-motion:reduce){.hero-pixels{display:none!important}.hero-type-line.is-pixel-active>.hero-type-text{opacity:1}}
