@@ -6,18 +6,18 @@ const projects = [
   {id:'tnuva', name:'Tnuva', subtitle:'Website design', category:'DIGITAL / UX / UI', color:'blue', description:'A large-scale website design project. Its full scope and original interface designs will be documented in a dedicated case study.'},
   {id:'hava', name:'Hava Zingboim', subtitle:'E-commerce', category:'UX / UI / ART DIRECTION', color:'pink', description:'An e-commerce website designed with attention to image-making and the way imagery supports product sales. Explore the Figma design below; detailed design decisions will be added.', figma:'https://www.figma.com/design/fMRkkhyWzIQ9Ju0hJOg0SF/Hava-Website-UI-Workflow--Copy-?node-id=964-1664'},
   {id:'similarweb', name:'Similarweb', subtitle:'Data Summit', category:'DIGITAL / UX / UI', color:'orange', description:'Selected UX/UI work for Similarweb Data Summit. Explore the original project on Behance.', source:'https://www.behance.net/gallery/155944507/UX-UI-Similarweb-Data-Summit'},
-  {id:'barilla', name:'Barilla', subtitle:'Brand & marketing design', category:'BRAND / MARKETING', color:'red', description:'Selected Barilla work from my brand and marketing design practice. The selected work is part of my Behance portfolio.'},
+  {id:'barilla', name:'Barilla', subtitle:'Home of Barilla · Australia', category:'BRAND / MARKETING', color:'red', caseStudy:'case-studies/barilla/', thumbnail:'assets/barilla/hero.jpg', description:'A community identity built around Italian food culture. Explore the strategic framework, logo directions and visual applications in the original Figma work.'},
   {id:'volcani', name:'Volcani / Kidum', subtitle:'Technology communication', category:'BRAND / UX / UI', color:'purple', description:'Website rebranding and custom iconography for technologies, with color differentiation between commercialized and non-commercialized technologies. Original visuals and the full project story will be added.'}
 ];
 const grid=document.getElementById('project-grid');
 const overviews=document.getElementById('project-overviews');
 projects.forEach((project,index)=>{
-  const card=document.createElement('a'); card.className='project-card'; card.href='#project-'+project.id;
+  const card=document.createElement('a'); card.className='project-card'; card.href=project.caseStudy||'#project-'+project.id;
   const art=document.createElement('div'); art.className='tile '+project.color;
   const meta=document.createElement('span'); meta.className='small-label'; meta.textContent=String(index+2).padStart(2,'0')+' / '+project.category;
   const name=document.createElement('span'); name.className='tile-name'; name.textContent=project.name;
   const bottom=document.createElement('span'); bottom.className='tile-bottom'; bottom.textContent=project.subtitle;
-  art.append(meta,name,bottom);
+  if(project.thumbnail){art.classList.add('barilla-thumbnail');const image=document.createElement('img');image.src=project.thumbnail;image.alt='Barilla community artwork: hands making pasta with the Barilla logo';image.width=1440;image.height=577;image.loading='lazy';image.decoding='async';art.append(image);}else{art.append(meta,name,bottom);}
   const title=document.createElement('h3');title.textContent=project.name;
   const caption=document.createElement('p');caption.textContent=project.subtitle;
   card.append(art,title,caption); grid.append(card);
@@ -27,6 +27,7 @@ projects.forEach((project,index)=>{
   const heading=document.createElement('h3');heading.textContent=project.name;
   const text=document.createElement('p');text.textContent=project.description;
   body.append(heading,text);
+  if(project.caseStudy){const link=document.createElement('a');link.href=project.caseStudy;link.className='text-link';link.textContent='Read the '+project.name+' case study';body.append(link);}
   if(project.figma){const preview=document.createElement('div');preview.className='figma-preview';preview.dataset.figmaUrl=project.figma;preview.dataset.figmaTitle=project.name+' design preview';body.append(preview);}
   if(project.source){const link=document.createElement('a');link.href=project.source;link.className='text-link';link.textContent='View the original project';link.target='_blank';link.rel='noopener noreferrer';body.append(link);}
   overview.append(number,body);overviews.append(overview);
