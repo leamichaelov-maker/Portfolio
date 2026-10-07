@@ -13,11 +13,12 @@ const grid=document.getElementById('project-grid');
 const overviews=document.getElementById('project-overviews');
 projects.forEach((project,index)=>{
   const card=document.createElement('a'); card.className='project-card'; card.href='#project-'+project.id;
-  const art=document.createElement('div'); art.className='tile '+project.color; art.dataset.projectTitle=project.name;
+  const art=document.createElement('div'); art.className='tile '+project.color;
   const meta=document.createElement('span'); meta.className='small-label'; meta.textContent=String(index+2).padStart(2,'0')+' / '+project.category;
   const name=document.createElement('span'); name.className='tile-name'; name.textContent=project.name;
   const bottom=document.createElement('span'); bottom.className='tile-bottom'; bottom.textContent=project.subtitle;
-  art.append(meta,name,bottom);
+  const hoverTitle=document.createElement('span'); hoverTitle.className='project-hover-title'; hoverTitle.textContent=project.name; hoverTitle.setAttribute('aria-hidden','true');
+  art.append(meta,name,bottom,hoverTitle);
   const title=document.createElement('h3');title.textContent=project.name;
   const caption=document.createElement('p');caption.textContent=project.subtitle;
   card.append(art,title,caption); grid.append(card);
