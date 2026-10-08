@@ -6,7 +6,7 @@ const projects = [
   {id:'tnuva', name:'Tnuva', subtitle:'Website design', category:'DIGITAL / UX / UI', color:'blue', description:'A large-scale website design project. Its full scope and original interface designs will be documented in a dedicated case study.'},
   {id:'hava', name:'Hava Zingboim', subtitle:'E-commerce', category:'UX / UI / ART DIRECTION', color:'pink', description:'An e-commerce website designed with attention to image-making and the way imagery supports product sales. Explore the Figma design below; detailed design decisions will be added.', figma:'https://www.figma.com/design/fMRkkhyWzIQ9Ju0hJOg0SF/Hava-Website-UI-Workflow--Copy-?node-id=964-1664'},
   {id:'similarweb', name:'Similarweb', subtitle:'Data Summit', category:'DIGITAL / UX / UI', color:'orange', description:'Selected UX/UI work for Similarweb Data Summit. Explore the original project on Behance.', source:'https://www.behance.net/gallery/155944507/UX-UI-Similarweb-Data-Summit'},
-  {id:'barilla', name:'Barilla', subtitle:'Home of Barilla · Australia', category:'BRAND / MARKETING', color:'red', caseStudy:'case-studies/barilla/', thumbnail:'assets/barilla/hero.jpg', description:'A community identity built around Italian food culture. Explore the strategic framework, logo directions and visual applications in the original Figma work.'},
+  {id:'barilla', name:'Barilla', subtitle:'Home of Barilla · Australia', category:'BRAND / MARKETING', color:'red', caseStudy:'case-studies/barilla/', thumbnail:'assets/barilla/card-cover.jpg', description:'A community identity built around Italian food culture. Explore the strategic framework, logo directions and visual applications in the original Figma work.'},
   {id:'volcani', name:'Volcani / Kidum', subtitle:'Technology communication', category:'BRAND / UX / UI', color:'purple', description:'Website rebranding and custom iconography for technologies, with color differentiation between commercialized and non-commercialized technologies. Original visuals and the full project story will be added.'}
 ];
 const grid=document.getElementById('project-grid');
@@ -17,7 +17,7 @@ projects.forEach((project,index)=>{
   const meta=document.createElement('span'); meta.className='small-label'; meta.textContent=String(index+2).padStart(2,'0')+' / '+project.category;
   const name=document.createElement('span'); name.className='tile-name'; name.textContent=project.name;
   const bottom=document.createElement('span'); bottom.className='tile-bottom'; bottom.textContent=project.subtitle;
-  if(project.thumbnail){art.classList.add('barilla-thumbnail');const image=document.createElement('img');image.src=project.thumbnail;image.alt='Barilla community artwork: hands making pasta with the Barilla logo';image.width=1440;image.height=577;image.loading='lazy';image.decoding='async';art.append(image);}else{art.append(meta,name,bottom);}
+  if(project.thumbnail){art.classList.add('barilla-thumbnail');const image=document.createElement('img');image.src=project.thumbnail;image.alt='Barilla community artwork: hands making pasta with the Barilla logo';image.width=1142;image.height=457;image.loading='lazy';image.decoding='async';art.append(image);}else{art.append(meta,name,bottom);}
   const title=document.createElement('h3');title.textContent=project.name;
   const caption=document.createElement('p');caption.textContent=project.subtitle;
   card.append(art,title,caption); grid.append(card);
