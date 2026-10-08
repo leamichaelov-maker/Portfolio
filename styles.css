@@ -5,4 +5,4 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 .figma-preview{margin-top:24px}.figma-preview button{font:inherit;font-weight:600;border:1px solid var(--ink);background:var(--ink);color:white;padding:14px 20px;cursor:pointer}.figma-preview button:focus-visible{outline:3px solid #005fcc;outline-offset:5px}.figma-preview iframe{display:block;width:100%;height:600px;border:1px solid var(--line);background:#ececec;margin-bottom:16px}.figma-preview p{font-size:16px;line-height:1.5}.figma-preview .text-link{margin-top:14px}.figma-note{color:var(--muted)}@media(max-width:760px){.figma-preview iframe{height:480px}}
 
-.barilla-thumbnail{padding:0;overflow:hidden;background:#181818;position:relative}.barilla-thumbnail img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.tile.barilla-thumbnail{min-height:0;padding:0;display:block;aspect-ratio:1142/457;background:#181818}.barilla-thumbnail img{display:block;width:100%;height:auto;object-fit:contain}
