@@ -1,0 +1,31 @@
+{
+  "fileKey": "2G8Af2n3G4ijBtvNbzsXtF",
+  "fileName": "RAD Website - UI Workflow",
+  "screens": [
+    {
+      "file": "home-search.webp",
+      "nodeId": "1496:27252",
+      "source": "Figma screenshot export; WebP quality 92; original proportions"
+    },
+    {
+      "file": "home-scroll.webp",
+      "nodeId": "659:10246",
+      "source": "Figma screenshot export; WebP quality 92; original proportions"
+    },
+    {
+      "file": "use-cases.webp",
+      "nodeId": "2883:294822",
+      "source": "Figma screenshot export; WebP quality 92; original proportions"
+    },
+    {
+      "file": "insights.webp",
+      "nodeId": "2883:295066",
+      "source": "Figma screenshot export; WebP quality 92; original proportions"
+    },
+    {
+      "file": "mobile-hero.webp",
+      "nodeId": "3874:91825",
+      "source": "Figma screenshot export; WebP quality 92; original proportions"
+    }
+  ]
+}
