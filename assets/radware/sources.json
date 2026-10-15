@@ -26,6 +26,21 @@
       "file": "mobile-hero.webp",
       "nodeId": "3874:91825",
       "source": "Figma screenshot export; WebP quality 92; original proportions"
+    },
+    {
+      "file": "ui-workflow.webp",
+      "nodeId": "1:114",
+      "source": "Original Figma screenshot export; original proportions preserved"
+    },
+    {
+      "file": "contact-validation.webp",
+      "nodeId": "3611:279601",
+      "source": "Original Figma screenshot export; original proportions preserved"
+    },
+    {
+      "file": "contact-sent.webp",
+      "nodeId": "1743:20184",
+      "source": "Original Figma screenshot export; original proportions preserved"
     }
   ]
 }
