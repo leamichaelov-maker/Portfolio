@@ -1,6 +1,8 @@
 # RAD website walkthrough
 
-60 seconds, 1920 × 1080, 30fps. Built in Remotion 4.0.538 using original captures of rad.com on 26 October 2026. The edit uses frame-driven scrolling, category hover captures, an animated cursor and clean page cuts. It is an animated walkthrough from still captures, not an uninterrupted screen recording. No audio.
+2 minutes 45 seconds, 1920 × 1080, 30fps. Built in Remotion 4.0.538 using original captures of rad.com on 26 October 2026. The opening holds each of the three category hover captures, then scrolls the homepage over 32 seconds with section pauses (the previous edit used 16 seconds). A 17 × 22px cursor is present throughout site scenes, reduced from 38 × 46px. Later pages use paired captures at scrollY 0 and 655px, with a stationary header and slow frame-driven scrolling. It is an animated walkthrough from still captures, not an uninterrupted screen recording. No audio. The 404 chapter is explicitly labeled as an original Figma design.
+
+Page order is centralized in `src/timeline.ts`, verified against the RAD Figma file pages (Sprints 1–5). The standalone preview has chapter buttons for quick review.
 
 ## Preview and edit
 
